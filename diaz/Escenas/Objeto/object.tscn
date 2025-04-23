@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8cnr6vxsf2hv"]
+
+[ext_resource type="Script" uid="uid://dlv3lhihsr8hh" path="res://Escenas/Objeto/object.gd" id="1_7bqgd"]
+[ext_resource type="Texture2D" uid="uid://cow7aa6fn2808" path="res://icon.svg" id="2_dfpk2"]
+
+[node name="Object" type="Node2D"]
+script = ExtResource("1_7bqgd")
+
+[node name="pj" type="Sprite2D" parent="."]
+texture = ExtResource("2_dfpk2")
+
+[node name="nombre_pj" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -34.0
+offset_top = -75.0
+offset_right = 28.0
+offset_bottom = -52.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "nombre"
+
+[node name="Button" type="Button" parent="."]
+offset_left = -54.0
+offset_top = 65.0
+offset_right = 56.0
+offset_bottom = 93.0
+text = "BOTON"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
